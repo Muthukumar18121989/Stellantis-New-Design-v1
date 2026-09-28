@@ -188,7 +188,7 @@
 .vol-table td.is-odmma { padding-top: 6px; padding-bottom: 6px; }
 .vol-input, .vs-input {
   display: block; width: 88px; height: 30px; padding: 0 8px; margin: 0;
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-sm); outline: 0;
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: var(--radius-sm); outline: 0;
   font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 600; letter-spacing: 0; color: var(--text); text-align: right; font-variant-numeric: tabular-nums;
   transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }

@@ -161,5 +161,25 @@
   style.textContent = 'tr[data-filtered-out]{display:none}';
   document.head.appendChild(style);
 
+  /* ---------- Scrollable tables are keyboard-reachable (WCAG 2.1.1) ---------- */
+  function markScrollable() {
+    document.querySelectorAll('.table-wrap, .mc-wrap, .dd-wrap, .art-wrap, .vol-scroll, .vs-table-wrap, .wf-table-wrap, .rp-table-wrap, .rp-aa-wrap, .cmp-scroll, .cmp-metrics-wrap, .ad-table-wrap, .rf-scroll, .fam-table-wrap, .art-table-wrap, .fam-panel__cards, .wf-stages').forEach(function (el) {
+      var scrolls = el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1;
+      if (scrolls && !el.hasAttribute('tabindex')) {
+        el.tabIndex = 0;
+        if (!el.hasAttribute('role')) el.setAttribute('role', 'region');
+        if (!el.hasAttribute('aria-label')) {
+          var h = el.closest('section, .rp-card, .ad-card, .art-view');
+          var t = h && h.querySelector('h2, h3');
+          el.setAttribute('aria-label', (t ? t.textContent.trim() + ' ' : '') + 'table');
+        }
+      }
+    });
+  }
+  markScrollable();
+  window.addEventListener('resize', markScrollable);
+  new MutationObserver(function () { clearTimeout(markScrollable.t); markScrollable.t = setTimeout(markScrollable, 100); })
+    .observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden', 'data-tab'] });
+
   window.PT = { toast: toast, busy: busy };
 })();

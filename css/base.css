@@ -23,7 +23,7 @@
   --gray-200: #e8e8e8;
   --gray-300: #d9d9d9;
   --gray-400: #a3a3a3;
-  --gray-500: #8a8a8a;
+  --gray-500: #6b6b6b;
   --gray-600: #6b6b6b;
   --gray-700: #4a4a4a;
   --gray-800: #262626;
@@ -41,6 +41,7 @@
 
   --border: #ebebeb;
   --border-strong: var(--gray-300);
+  --border-control: #8f8f8f; /* 3.2:1 on white: outlines of inputs and toggles (WCAG 1.4.11) */
   --border-focus: var(--gray-950);
 
   --text: var(--gray-950);
@@ -56,8 +57,8 @@
   --warning: #b45309;
   --warning-bg: #fffbeb;
   --warning-border: #fde68a;
-  --danger: #dc2626;
-  --danger-hover: #b91c1c;
+  --danger: #c81e1e;
+  --danger-hover: #a51717;
   --danger-bg: #fef2f2;
   --danger-border: #fecaca;
 
@@ -448,7 +449,7 @@ html.is-sidebar-collapsed .sidebar__label { height: 14px; margin-top: 0; }
 .file-input, .bu-file__box {
   height: var(--control-h); min-width: 0;
   display: flex; align-items: center; gap: 8px; padding: 0 12px;
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md);
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: var(--radius-md);
   box-shadow: var(--shadow-xs);
   font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 400; letter-spacing: 0; color: var(--text);
   text-align: left; outline: none;
@@ -456,7 +457,7 @@ html.is-sidebar-collapsed .sidebar__label { height: 14px; margin-top: 0; }
 }
 :is(.input, .field__control, .text-input, .select__trigger, .cfg-input, .cfg-select, .search, .fam-search, .ad-search,
 .uf__box, .ue-field__box, .pp-field__box, .sa-row__box, .res-select, .rp-select, .rf-select, .vs-field, .art-select,
-.file-input, .bu-file__box):hover { border-color: var(--gray-400); }
+.file-input, .bu-file__box):hover { border-color: var(--gray-700); }
 :is(.input, .text-input, .cfg-input, .vs-field):focus,
 :is(.field__control, .select__trigger, .cfg-select, .res-select, .rp-select, .rf-select, .art-select):focus-visible,
 :is(.search, .fam-search, .ad-search, .uf__box, .ue-field__box, .pp-field__box, .sa-row__box, .file-input, .bu-file__box):focus-within,
@@ -492,7 +493,7 @@ html.is-sidebar-collapsed .sidebar__label { height: 14px; margin-top: 0; }
 
 textarea.input, .es-dialog__comments textarea, .ue-comments textarea, .pp-desc textarea {
   display: block; width: 100%; height: 100%; min-height: 40px; margin: 0; padding: 9px 12px; resize: vertical; overflow: auto;
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); box-shadow: var(--shadow-xs);
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: var(--radius-md); box-shadow: var(--shadow-xs);
   font-family: var(--font-sans); font-size: var(--text-sm); line-height: 1.5; letter-spacing: 0; color: var(--text); outline: none;
   transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
@@ -505,7 +506,7 @@ textarea.input, .es-dialog__comments textarea, .ue-comments textarea, .pp-desc t
   position: relative; top: 0;
   width: 16px; height: 16px; flex: none; margin: 0; padding: 0;
   appearance: none; -webkit-appearance: none; cursor: pointer;
-  background: var(--surface) no-repeat center / 12px 12px; border: 1px solid var(--gray-400); border-radius: var(--radius-xs);
+  background: var(--surface) no-repeat center / 12px 12px; border: 1px solid var(--border-control); border-radius: var(--radius-xs);
   box-shadow: var(--shadow-xs);
   transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
@@ -526,7 +527,7 @@ textarea.input, .es-dialog__comments textarea, .ue-comments textarea, .pp-desc t
 }
 :is(.radio, .cfg-radio, .sa-radio) input {
   width: 16px; height: 16px; flex: none; margin: 0; appearance: none; -webkit-appearance: none; cursor: pointer;
-  background: var(--surface); border: 1px solid var(--gray-400); border-radius: 50%; box-shadow: var(--shadow-xs);
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: 50%; box-shadow: var(--shadow-xs);
   transition: border-color var(--dur-fast) var(--ease-out), border-width var(--dur-fast) var(--ease-out);
 }
 :is(.radio, .cfg-radio, .sa-radio) input:hover { border-color: var(--gray-700); }
@@ -790,7 +791,7 @@ dialog.is-closing::backdrop { animation: fade-out 160ms var(--ease-in-out) forwa
 .choice {
   position: relative; flex: 1; min-width: 0;
   display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md);
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: var(--radius-md);
   cursor: pointer;
   transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
 }
@@ -798,7 +799,7 @@ dialog.is-closing::backdrop { animation: fade-out 160ms var(--ease-in-out) forwa
 .choice:has(input:checked) { border-color: var(--gray-950); box-shadow: 0 0 0 1px var(--gray-950); }
 .choice input {
   width: 16px; height: 16px; flex: none; margin: 1px 0 0; appearance: none; -webkit-appearance: none; cursor: inherit;
-  background: var(--surface); border: 1px solid var(--gray-400); border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border-control); border-radius: 50%;
   transition: border-width var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
 }
 .choice input:checked { border: 5px solid var(--gray-950); }
