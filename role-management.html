@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <script>try{if(localStorage.getItem("pt-sidebar")==="collapsed")document.documentElement.classList.add("is-sidebar-collapsed")}catch(e){}</script>
+  <title>Roles · Stellantis Promotool</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/configuration.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/user-menu.css">
+</head>
+<body>
+<!-- Role Management -->
+<div class="page page--admin page--roles">
+
+  <aside class="sidebar" aria-label="Primary">
+    <a class="sidebar__brand" href="experiment-status.html" aria-label="Stellantis Promotool, home">
+      <span class="sidebar__mark"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 11.5 8 4.5l5 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6 11.5h4.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="sidebar__brand-text"><span class="sidebar__wordmark">STELLANTIS</span><span class="sidebar__product">Promotool</span></span>
+    </a>
+    <nav class="sidebar__nav" aria-label="Main">
+      <p class="sidebar__label">Approvals</p>
+      <a class="nav-item" href="experiment-status.html" data-tooltip="Approval queue"><img class="nav-item__icon" src="assets/icons/home.svg" width="18" height="18" alt=""><span class="nav-item__text">Approval queue</span></a>
+      <p class="sidebar__label">Administration</p>
+      <a class="nav-item" href="doa-rules.html" data-tooltip="DOA rules"><img class="nav-item__icon" src="assets/icons/hammer-blue.svg" width="18" height="18" alt=""><span class="nav-item__text">DOA rules</span></a>
+      <a class="nav-item" href="user-management.html" data-tooltip="Users"><img class="nav-item__icon" src="assets/icons/user-blue.svg" width="18" height="18" alt=""><span class="nav-item__text">Users</span></a>
+      <a class="nav-item" href="role-management.html" aria-current="page" data-tooltip="Roles"><img class="nav-item__icon" src="assets/icons/hierarchy-blue.svg" width="18" height="18" alt=""><span class="nav-item__text">Roles</span></a>
+      <a class="nav-item" href="referential.html" data-tooltip="Referential"><img class="nav-item__icon" src="assets/icons/database-blue.svg" width="18" height="18" alt=""><span class="nav-item__text">Referential</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <p class="sidebar__meta"><b>Aftermarket · Europe</b>Administration</p>
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <header class="topbar">
+      <button class="topbar__toggle" type="button" data-sidebar-toggle aria-label="Collapse sidebar" data-tooltip="Toggle sidebar" data-tooltip-side="bottom"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2.5" y="3.5" width="13" height="11" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M7 3.5v11" stroke="currentColor" stroke-width="1.3"/></svg></button>
+      <span class="crumbs__divider" aria-hidden="true"></span>
+      <nav class="crumbs" aria-label="Breadcrumb"><span class="crumbs__root">Administration</span><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Roles</span></nav>
+      <div class="topbar__right">
+        <button class="topbar__btn lang" type="button" aria-label="Language: English"><img src="assets/icons/world.svg" width="18" height="18" alt="">EN<img class="lang__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt=""></button>
+        <button class="topbar__btn notif" type="button" aria-label="Notifications (5)" data-tooltip="Notifications" data-tooltip-side="bottom"><img src="assets/icons/bell.svg" width="18" height="18" alt=""><span class="notif__count">5</span></button>
+        <span class="topbar__divider" aria-hidden="true"></span>
+        <button class="profile" type="button" aria-haspopup="dialog">
+          <span class="profile__avatar" aria-hidden="true">KR</span>
+          <span class="profile__text"><span class="profile__name">Kristen</span><span class="profile__role">Promotool Admin</span></span>
+          <img class="profile__chevron" src="assets/icons/chevron-down.svg" width="14" height="14" alt="">
+        </button>
+      </div>
+    </header>
+
+    <header class="ad-header">
+      <div class="ad-header__inner">
+        <p class="page-head__eyebrow">Administration</p>
+        <h1 class="ad-header__title">Roles</h1>
+        <p class="ad-header__subtitle">Roles define what each group of users can see and do in Promotool.</p>
+      </div>
+    </header>
+
+    <main class="ad-body">
+      <section class="rm-summary" aria-labelledby="rm-summary-title">
+        <div class="rm-summary__main">
+          <h2 class="rm-summary__title" id="rm-summary-title">Users by role</h2>
+          <div class="rm-counts">
+            <div class="rm-count rm-count--total"><p class="rm-count__value">11</p><p class="rm-count__label">Total roles</p></div>
+            <div class="rm-count-rows">
+              <div class="rm-count-row">
+                <span class="rm-divider"></span>
+                <div class="rm-count"><p class="rm-count__value">340</p><p class="rm-count__label">Promotion Pilot</p></div>
+                <div class="rm-count"><p class="rm-count__value">3</p><p class="rm-count__label">Marketing Manager</p></div>
+                <div class="rm-count"><p class="rm-count__value">1</p><p class="rm-count__label">Finance Manager</p></div>
+                <div class="rm-count"><p class="rm-count__value">19</p><p class="rm-count__label">Guest</p></div>
+                <span class="rm-divider"></span>
+              </div>
+              <div class="rm-count-row">
+                <span class="rm-divider"></span>
+                <div class="rm-count"><p class="rm-count__value">19</p><p class="rm-count__label">Tool Administrator</p></div>
+                <div class="rm-count"><p class="rm-count__value">99</p><p class="rm-count__label">Super Administrator</p></div>
+                <span class="rm-divider"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="icon-btn rm-download" type="button" aria-label="Download"><img src="assets/icons/download.svg" width="16" height="16" alt=""></button>
+      </section>
+
+      <section class="ad-card rm-card" aria-labelledby="rm-title">
+        <div class="ad-card__head rm-head">
+          <div>
+            <h2 class="ad-card__title" id="rm-title">All roles</h2>
+            <p class="rm-head__desc">Select a role to edit its details</p>
+          </div>
+          <a class="btn-primary rm-create" href="role-create.html"><img src="assets/icons/plus-thin.svg" width="16" height="16" alt="">Create role</a>
+        </div>
+        <ul class="rm-legend">
+          <li><span class="rm-swatch rm-swatch--orange"></span>Approve/Reject</li>
+          <li><span class="rm-swatch rm-swatch--blue"></span>View Only</li>
+          <li><span class="rm-swatch rm-swatch--grey"></span>Create/Modify</li>
+        </ul>
+
+        <div class="ad-table-wrap rm-table-wrap">
+          <table class="ad-table ad-table--list">
+            <thead>
+              <tr><th>Role ID</th><th><span class="ad-th-sort">Role Name<button class="ad-sort" type="button" aria-label="Sort by Role Name"><img src="assets/icons/arrows-down-up-thin.svg" width="16" height="16" alt=""></button></span></th><th>Capabilities</th><th class="ad-center">Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>R112</td><td>Promotion Pilot</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--grey rm-cap--dashboard">Dashboard</span><span class="rm-cap rm-cap--grey rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+              <tr><td>R113</td><td>Marketing Manager</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--orange rm-cap--dashboard">Dashboard</span><span class="rm-cap rm-cap--orange rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+              <tr><td>R114</td><td>Finance Manager</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--grey rm-cap--dashboard">Dashboard</span><span class="rm-cap rm-cap--grey rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+              <tr><td>R115</td><td>Guest</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--grey rm-cap--dashboard">Dashboard</span><span class="rm-cap rm-cap--grey rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+              <tr><td>R116</td><td>Tool Administrator</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--grey rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+              <tr><td>R117</td><td>Super Administrator</td><td class="rm-caps"><span class="rm-caps__list"><span class="rm-cap rm-cap--blue rm-cap--creation">Creation</span></span></td><td class="ad-center"><span class="rm-actions"><button class="ad-icon" type="button" aria-label="Edit role"><img src="assets/icons/pencil-grey-24.svg" width="24" height="24" alt=""></button><button class="ad-icon" type="button" aria-label="Delete role"><img src="assets/icons/trash-grey-24.svg" width="24" height="24" alt=""></button></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer ad-footer">
+          <p class="table-footer__summary">Showing 1 of 10 entries</p>
+          <nav class="pagination ad-pagination" aria-label="Pagination">
+            <button class="pagination__arrow pagination__arrow--prev" aria-label="Previous page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+            <button class="pagination__page pagination__page--current" aria-current="page"><span>1</span></button>
+            <button class="pagination__page"><span>2</span></button>
+            <button class="pagination__page"><span>3</span></button>
+            <button class="pagination__page"><span>4</span></button>
+            <button class="pagination__page"><span>5</span></button>
+            <button class="pagination__arrow pagination__arrow--next" aria-label="Next page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</div>
+  <script src="js/user-menu.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

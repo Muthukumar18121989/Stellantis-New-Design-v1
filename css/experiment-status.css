@@ -1,0 +1,41 @@
+/* Approval queue: reuses scope cards, filters, the promotion table and Workflow History from css/experiment.css. */
+
+.es-card {
+  display: flex; flex-direction: column; gap: var(--space-4); padding: var(--space-5) var(--space-5) var(--space-2);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-xs);
+}
+.es-toolbar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.es-toolbar__right { display: flex; align-items: center; gap: var(--space-3); }
+.es-search { width: 280px; }
+
+.es-status__dot { width: 7px; height: 7px; flex: none; border-radius: 50%; }
+.es-status__dot--submitted { background: var(--warning); }
+.es-status__dot--approved { background: var(--success); }
+.es-status__dot--rejected { background: var(--danger); }
+.es-status__count {
+  min-width: 18px; height: 18px; display: inline-grid; place-items: center; margin-left: 2px; padding: 0 5px;
+  border-radius: var(--radius-full); background: rgba(10, 10, 10, 0.06);
+  font-size: 10px; font-weight: 600; color: var(--text-secondary); font-variant-numeric: tabular-nums;
+}
+.es-status__tab.is-active .es-status__count { background: var(--surface-inverse); color: #fff; }
+
+.country {
+  display: inline-grid; place-items: center; min-width: 30px; height: 22px; padding: 0 6px;
+  border: 1px solid var(--border); border-radius: var(--radius-xs); background: var(--surface-subtle);
+  font-size: var(--text-2xs); font-weight: 600; letter-spacing: 0.04em; color: var(--text-secondary);
+}
+
+.promos .es-actions { width: 1%; padding-right: 10px; }
+.es-actions__inner { display: flex; align-items: center; justify-content: flex-end; gap: 2px; }
+.es-action--approve:hover { background: var(--success-bg); }
+.es-action--reject:hover { background: var(--danger-bg); }
+
+/* Approve / Reject dialogs */
+.es-dialog { width: 560px; }
+.es-dialog__body { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-6); }
+.es-dialog__comments { display: block; }
+.es-dialog__comments textarea { min-height: 112px; }
+.field__optional { margin-left: 6px; font-weight: 400; color: var(--text-tertiary); }
+
+/* Decided requests keep only their history action */
+.promos tr[data-status]:not([data-status="submitted"]) [data-decision] { display: none; }

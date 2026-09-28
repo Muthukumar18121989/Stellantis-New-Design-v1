@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <script>try{if(localStorage.getItem("pt-sidebar")==="collapsed")document.documentElement.classList.add("is-sidebar-collapsed")}catch(e){}</script>
+  <title>Reports · Stellantis Promotool</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/configuration.css">
+  <link rel="stylesheet" href="css/reports.css">
+  <link rel="stylesheet" href="css/user-menu.css">
+</head>
+<body>
+<div class="page page--reports">
+  <!-- Left menu bar -->
+  <aside class="sidebar" aria-label="Primary">
+    <a class="sidebar__brand" href="experiments.html" aria-label="Stellantis Promotool, home">
+      <span class="sidebar__mark"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 11.5 8 4.5l5 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6 11.5h4.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="sidebar__brand-text"><span class="sidebar__wordmark">STELLANTIS</span><span class="sidebar__product">Promotool</span></span>
+    </a>
+    <nav class="sidebar__nav" aria-label="Main">
+      <p class="sidebar__label">Workspace</p>
+      <a class="nav-item" href="promotool-dashboard.html" data-tooltip="Dashboard"><img class="nav-item__icon" src="assets/icons/grid-dots-blue.svg" width="18" height="18" alt=""><span class="nav-item__text">Dashboard</span></a>
+      <a class="nav-item" href="experiments.html" data-tooltip="Experiments"><img class="nav-item__icon" src="assets/icons/route.svg" width="18" height="18" alt=""><span class="nav-item__text">Experiments</span></a>
+      <a class="nav-item" href="reports.html" aria-current="page" data-tooltip="Reports"><img class="nav-item__icon" src="assets/icons/report-analytics-active.svg" width="18" height="18" alt=""><span class="nav-item__text">Reports</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <p class="sidebar__meta"><b>Aftermarket · Europe</b>Promotion workspace</p>
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <header class="topbar">
+      <button class="topbar__toggle" type="button" data-sidebar-toggle aria-label="Collapse sidebar" data-tooltip="Toggle sidebar" data-tooltip-side="bottom"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2.5" y="3.5" width="13" height="11" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M7 3.5v11" stroke="currentColor" stroke-width="1.3"/></svg></button>
+      <span class="crumbs__divider" aria-hidden="true"></span>
+      <nav class="crumbs" aria-label="Breadcrumb"><span class="crumbs__root">Workspace</span><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Reports</span></nav>
+      <div class="topbar__right">
+        <button class="topbar__btn lang" type="button" aria-label="Language: English"><img src="assets/icons/world.svg" width="18" height="18" alt="">EN<img class="lang__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt=""></button>
+        <button class="topbar__btn notif" type="button" aria-label="Notifications (5)" data-tooltip="Notifications" data-tooltip-side="bottom"><img src="assets/icons/bell.svg" width="18" height="18" alt=""><span class="notif__count">5</span></button>
+        <span class="topbar__divider" aria-hidden="true"></span>
+        <button class="profile" type="button" aria-haspopup="dialog">
+          <span class="profile__avatar" aria-hidden="true">MW</span>
+          <span class="profile__text"><span class="profile__name">Marcus Weber</span><span class="profile__role">Promotion Pilot (EE)</span></span>
+          <img class="profile__chevron" src="assets/icons/chevron-down.svg" width="14" height="14" alt="">
+        </button>
+      </div>
+    </header>
+
+    <section class="page-head">
+      <div class="page-head__text">
+        <p class="page-head__eyebrow">Workspace</p>
+        <h1 class="page-head__title">Reports</h1>
+        <p class="page-head__desc">Follow promotion performance through the pipeline and compare price elasticity across markets.</p>
+      </div>
+      <div class="page-head__actions">
+        <button class="btn" type="button" data-open-dialog="report-download"><img src="assets/icons/download.svg" width="16" height="16" alt="">Export report</button>
+      </div>
+    </section>
+
+    <main class="rp-body">
+      <!-- Tabs -->
+      <div class="rp-tabs tabs-line" role="tablist">
+        <button class="rp-tab tab-line is-active" type="button" role="tab" aria-selected="true" aria-controls="rp-panel-promotions">Promotions</button>
+        <button class="rp-tab tab-line" type="button" role="tab" aria-selected="false" aria-controls="rp-panel-advanced">Advanced analytics</button>
+      </div>
+
+      <div class="rp-panel" id="rp-panel-promotions" role="tabpanel">
+
+      <!-- Filters -->
+      <section class="rp-filters" aria-label="Filters">
+        <div class="rp-filters__row">
+          <button class="rp-select rp-select--soft" type="button"><span class="rp-select__value">Market</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          <button class="rp-select" type="button"><span class="rp-select__value">All product families</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          <button class="rp-select" type="button"><span class="rp-select__value">All parts</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          <button class="rp-select" type="button"><span class="rp-select__value">All statuses</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+        </div>
+        <div class="rp-filters__row">
+          <div class="rp-filters__dates">
+            <button class="rp-select" type="button"><span class="rp-select__value">Start date</span><img src="assets/icons/calendar.svg" width="16" height="16" alt=""></button>
+            <button class="rp-select" type="button"><span class="rp-select__value">End date</span><img src="assets/icons/calendar.svg" width="16" height="16" alt=""></button>
+          </div>
+          <div class="rp-filters__actions">
+            <button class="icon-btn" type="button" aria-label="Reset filters" data-tooltip="Reset filters"><img src="assets/icons/refresh.svg" width="16" height="16" alt=""></button>
+            <button class="btn btn--primary" type="button">Apply</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotion Stage Tracker -->
+      <section class="rp-card rp-card--stages">
+        <h2 class="rp-title"><span class="rp-title__text">Pipeline</span><span class="rp-title__note">41 promotions in total</span></h2>
+        <div class="rp-stages">
+          <ol class="rp-steps">
+              <li class="rp-step rp-step--edit"><span class="rp-step__dot"><img src="assets/icons/step-edit.svg" width="24" height="24" alt=""></span><span class="rp-step__count">0</span><span class="rp-step__text">Draft</span></li>
+              <li class="rp-step rp-step--clock"><span class="rp-step__dot"><img src="assets/icons/step-clock.svg" width="24" height="24" alt=""></span><span class="rp-step__count">3</span><span class="rp-step__text">Pending approval</span></li>
+              <li class="rp-step rp-step--checkbox"><span class="rp-step__dot"><img src="assets/icons/step-checkbox.svg" width="24" height="24" alt=""></span><span class="rp-step__count">18</span><span class="rp-step__text">Approved</span></li>
+              <li class="rp-step rp-step--chart-line"><span class="rp-step__dot"><img src="assets/icons/step-chart-line.svg" width="24" height="24" alt=""></span><span class="rp-step__count">4</span><span class="rp-step__text">Active</span></li>
+              <li class="rp-step rp-step--circle-check"><span class="rp-step__dot"><img src="assets/icons/step-circle-check.svg" width="24" height="24" alt=""></span><span class="rp-step__count">16</span><span class="rp-step__text">Completed</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Promotion Performance Summary -->
+      <section class="rp-card rp-card--summary">
+        <h2 class="rp-title"><span class="rp-title__text">Performance</span><span class="rp-title__note">Across 20 active and completed promotions</span></h2>
+        <div class="rp-tiles">
+          <div class="rp-tile"><span class="rp-tile__label">Planned revenue</span><span class="rp-tile__value">€6,060,000.00</span></div>
+          <div class="rp-tile"><span class="rp-tile__label">Registered revenue</span><span class="rp-tile__value">€2,305.27</span></div>
+          <div class="rp-tile"><span class="rp-tile__label">Total estimated cost</span><span class="rp-tile__value">€1,134,000.00</span></div>
+          <div class="rp-tile rp-tile--uplift">
+            <span class="rp-tile__label">Sales uplift</span>
+            <span class="rp-uplift" role="img" aria-label="Sales uplift: break-even 18,000, current 25,000, planned 52,500">
+              <span class="rp-uplift__track"></span><span class="rp-uplift__range"></span><span class="rp-uplift__marker"></span>
+              <span class="rp-uplift__label" style="left:46.5px;width:61px">18,000<br>Break-even</span>
+              <span class="rp-uplift__label" style="left:116.5px;width:61px">25,000<br>Current</span>
+              <span class="rp-uplift__label" style="left:232.5px;width:42px">52,500<br>Planned</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotion Tracking -->
+      <section class="rp-card rp-card--tracking">
+        <div class="rp-title rp-title--tools">
+          <h2 class="rp-title__text">Promotion tracking</h2>
+          <div class="rp-aggregate">
+            <span class="rp-aggregate__label">Group by</span>
+            <button class="rp-select rp-select--soft" type="button"><span class="rp-select__value">Individual promotions</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          </div>
+        </div>
+        <div class="rp-tracking">
+          <div class="rp-table-wrap">
+            <table class="rp-table">
+              <thead>
+                <tr>
+                  <th class="rp-c-select" scope="col"><input class="rp-checkbox" type="checkbox" aria-label="Select all"></th>
+                  <th scope="col">Promotion</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Markets</th>
+                  <th class="rp-num" scope="col">Order intake · vol.</th>
+                  <th class="rp-num" scope="col">Invoiced · vol.</th>
+                  <th class="rp-num" scope="col">Order intake · rev.</th>
+                  <th class="rp-num" scope="col">Invoiced · rev.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="rp-c-select"><span class="rp-select-cell"><input class="rp-checkbox" type="checkbox" checked aria-label="Select Spring Promotion 1"><button class="rp-toggle" type="button" aria-label="Show details"><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button></span></td>
+                  <td class="rp-c-name">Spring Promotion</td>
+                  <td><span class="rp-badge rp-badge--done">Completed</span></td>
+                  <td><span class="rp-badges"><span class="rp-badge">France</span><span class="rp-badge">Italy</span></span></td>
+                  <td class="rp-num rp-num--light">3,500</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value">2,782</span><span class="rp-bar"><span class="rp-bar__fill" style="width:56px"></span></span></td>
+                  <td class="rp-num">€150,000</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value">€158,000</span><span class="rp-bar"><span class="rp-bar__fill" style="width:56px"></span></span></td>
+                </tr>
+                <tr>
+                  <td class="rp-c-select"><span class="rp-select-cell"><input class="rp-checkbox" type="checkbox" checked aria-label="Select Spring Promotion 2"><button class="rp-toggle" type="button" aria-label="Show details"><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button></span></td>
+                  <td class="rp-c-name">Spring Promotion</td>
+                  <td><span class="rp-badge rp-badge--done">Completed</span></td>
+                  <td><span class="rp-badges"><span class="rp-badge">France</span><span class="rp-badge">Italy</span></span></td>
+                  <td class="rp-num rp-num--light">3,500</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value is-ahead">3,782</span><span class="rp-bar"><span class="rp-bar__fill is-ahead" style="width:101px"></span></span></td>
+                  <td class="rp-num">€150,000</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value is-ahead">€158,000</span><span class="rp-bar"><span class="rp-bar__fill is-ahead" style="width:123px"></span></span></td>
+                </tr>
+                <tr>
+                  <td class="rp-c-select"><span class="rp-select-cell"><input class="rp-checkbox" type="checkbox" checked aria-label="Select Spring Promotion 3"><button class="rp-toggle" type="button" aria-label="Show details"><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button></span></td>
+                  <td class="rp-c-name">Spring Promotion</td>
+                  <td><span class="rp-badge rp-badge--done">Completed</span></td>
+                  <td><span class="rp-badges"><span class="rp-badge">France</span><span class="rp-badge">Italy</span></span></td>
+                  <td class="rp-num rp-num--light">3,500</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value">2,782</span><span class="rp-bar"><span class="rp-bar__fill" style="width:56px"></span></span></td>
+                  <td class="rp-num">€150,000</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value">€158,000</span><span class="rp-bar"><span class="rp-bar__fill" style="width:56px"></span></span></td>
+                </tr>
+                <tr>
+                  <td class="rp-c-select"><span class="rp-select-cell"><input class="rp-checkbox" type="checkbox" checked aria-label="Select Spring Promotion 4"><button class="rp-toggle" type="button" aria-label="Show details"><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button></span></td>
+                  <td class="rp-c-name">Spring Promotion</td>
+                  <td><span class="rp-badge rp-badge--done">Completed</span></td>
+                  <td><span class="rp-badges"><span class="rp-badge">France</span><span class="rp-badge">Italy</span></span></td>
+                  <td class="rp-num rp-num--light">3,500</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value is-ahead">4,782</span><span class="rp-bar"><span class="rp-bar__fill is-ahead" style="width:101px"></span></span></td>
+                  <td class="rp-num">€150,000</td>
+                  <td class="rp-num rp-num--bar"><span class="rp-value is-ahead">€158,000</span><span class="rp-bar"><span class="rp-bar__fill is-ahead" style="width:123px"></span></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="rp-pager">
+            <p class="rp-pager__summary">Showing 1–4 of 41</p>
+            <nav class="pagination" aria-label="Pagination">
+              <button class="pagination__arrow pagination__arrow--prev" aria-label="Previous page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+              <button class="pagination__page pagination__page--current" aria-current="page"><span>1</span></button>
+              <button class="pagination__page"><span>2</span></button>
+              <button class="pagination__page"><span>3</span></button>
+              <button class="pagination__page"><span>4</span></button>
+              <button class="pagination__page"><span>5</span></button>
+              <button class="pagination__arrow pagination__arrow--next" aria-label="Next page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+            </nav>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div class="rp-panel" id="rp-panel-advanced" role="tabpanel" hidden>
+      <!-- Filters -->
+      <section class="rp-filters rp-filters--aa" aria-label="Filters">
+        <div class="rp-filters__row">
+          <button class="rp-select rp-select--soft" type="button"><span class="rp-select__value">Market</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          <button class="rp-select" type="button"><span class="rp-select__value">All product families</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+          <button class="rp-select" type="button"><span class="rp-select__value">All parts</span><img src="assets/icons/chevron-down.svg" width="16" height="16" alt=""></button>
+        </div>
+        <div class="rp-filters__row">
+          <div class="rp-filters__dates">
+            <button class="rp-select" type="button"><span class="rp-select__value">Start date</span><img src="assets/icons/calendar.svg" width="16" height="16" alt=""></button>
+            <button class="rp-select" type="button"><span class="rp-select__value">End date</span><img src="assets/icons/calendar.svg" width="16" height="16" alt=""></button>
+          </div>
+          <div class="rp-filters__actions">
+            <button class="icon-btn" type="button" aria-label="Reset filters" data-tooltip="Reset filters"><img src="assets/icons/refresh.svg" width="16" height="16" alt=""></button>
+            <button class="btn btn--primary" type="button">Apply</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Price Elasticity -->
+      <section class="rp-card rp-card--elasticity">
+        <div class="rp-title rp-title--desc">
+          <h2 class="rp-title__text">Price elasticity</h2>
+          <p class="rp-title__desc"><span>Volume response to price changes, promotional versus organic periods.</span></p>
+        </div>
+        <div class="rp-el" role="img" aria-label="Price change % against volume change % for organic and promo sales">
+          <svg class="rp-el__lines" width="1242" height="315" viewBox="0 0 1242 315" fill="none" aria-hidden="true">
+            <rect x="65.5" y="55.5" width="309" height="206" fill="#F2F2F2" stroke="#D6D4D4" stroke-dasharray="8 8"/>
+            <rect x="63" y="55" width="1171" height="1" fill="#D9D9D9"/>
+            <rect x="63" y="105" width="1171" height="1" fill="#D9D9D9"/>
+            <rect x="63" y="157" width="1171" height="1" fill="#D9D9D9"/>
+            <rect x="63" y="208" width="1171" height="0.9" fill="#D9D9D9"/>
+            <rect x="63" y="260.2" width="1171" height="1.8" fill="#D9D9D9"/>
+            <path transform="translate(65 66)" d="M0 1H304.911L450.346 11.029L769.801 91.2609L1171 174" stroke="#0A0A0A" stroke-width="2"/>
+            <path transform="translate(65 98)" d="M0 1H309.028L447.264 14L776.326 62L1171 122" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+            <path transform="translate(845 54.5)" d="M0.5 207.5V0" stroke="#BCBABA" stroke-dasharray="10 10"/>
+            <circle cx="516.5" cy="76.5" r="4.5" fill="#0A0A0A"/>
+          </svg>
+          <ul class="rp-el__legend">
+            <li><span class="rp-el__key rp-el__key--organic"></span>Organic</li>
+            <li><span class="rp-el__key rp-el__key--promo"></span>Promo</li>
+            <li><span class="rp-el__key rp-el__key--flat"></span>Response flattens</li>
+          </ul>
+            <span class="rp-el__y" style="top:44px">40%</span>
+            <span class="rp-el__y" style="top:96px">20%</span>
+            <span class="rp-el__y" style="top:148px">0%</span>
+            <span class="rp-el__y" style="top:200px">-20%</span>
+            <span class="rp-el__y" style="top:252px">-40%</span>
+            <span class="rp-el__x" style="left:57px">-40%</span>
+            <span class="rp-el__x" style="left:249.5px">-30%</span>
+            <span class="rp-el__x" style="left:442px">-20%</span>
+            <span class="rp-el__x" style="left:634.5px">-10%</span>
+            <span class="rp-el__x" style="left:827px">0%</span>
+            <span class="rp-el__x" style="left:1019.5px">10%</span>
+            <span class="rp-el__x" style="left:1212px">20%</span>
+          <span class="rp-el__axis rp-el__axis--y">Volume change %</span>
+          <span class="rp-el__axis rp-el__axis--x">Price change %</span>
+          <span class="rp-el__note" style="left:475px;top:57px;width:83.5px">Saturation -15%</span>
+          <span class="rp-el__note" style="left:66px;top:53px;width:69.5px">Beyond -22%</span>
+        </div>
+      </section>
+
+      <!-- Part elasticity across markets -->
+      <section class="rp-card rp-card--markets">
+        <div class="rp-title rp-title--badge">
+          <h2 class="rp-title__text">OF-10492 Oil filter spin-on · across markets</h2>
+          <button class="btn btn--sm" type="button">Compare across family</button>
+        </div>
+        <div class="rp-aa-wrap">
+          <table class="rp-aa-table">
+            <thead>
+              <tr>
+                  <th scope="col"><span class="rp-aa-th">Market<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">Volume (units)<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">Organic elasticity<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">Promo elasticity<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">&Delta; (Org - Promo)<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">Saturates at<img src="assets/icons/arrows-down-up.svg" width="16" height="16" alt=""></span></th>
+                  <th scope="col"><span class="rp-aa-th">Sensitivity</span></th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr><td>Germany</td><td class="rp-num">7,200</td><td class="rp-num">-2.85</td><td class="rp-num">-1.95</td><td class="rp-num">-0.90</td><td class="rp-num">-15%</td><td><span class="rp-badge rp-badge--medium">Medium</span></td></tr>
+                <tr><td>France</td><td class="rp-num">6,100</td><td class="rp-num">-2.70</td><td class="rp-num">-1.85</td><td class="rp-num">-0.85</td><td class="rp-num">-15%</td><td><span class="rp-badge rp-badge--medium">Medium</span></td></tr>
+                <tr><td>Italy</td><td class="rp-num">3,400</td><td class="rp-num">-1.95</td><td class="rp-num">-1.30</td><td class="rp-num">-0.65</td><td class="rp-num">-14%</td><td><span class="rp-badge rp-badge--medium">Medium</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="rp-aa-legend">Sensitivity: <b>High</b> steeper than −3.0 · <b>Medium</b> −1.5 to −3.0 · <b>Low</b> flatter than −1.5</p>
+      </section>
+      </div>
+    </main>
+  </div>
+</div>
+<dialog class="rp-download" id="report-download" aria-labelledby="rp-download-title">
+  <button class="rp-download__close" type="button" aria-label="Close" data-close-dialog><img src="assets/icons/x.svg" width="24" height="24" alt=""></button>
+  <header class="modal-head rp-download__head">
+    <h2 class="rp-download__title" id="rp-download-title">Export report</h2>
+    <p class="rp-download__text">Choose the sections to include. The export uses your current filters.</p>
+  </header>
+  <div class="rp-dl">
+    <table class="rp-dl__table">
+      <thead>
+        <tr><th class="rp-dl__cell rp-dl__cell--all" scope="col"><input class="rp-checkbox" type="checkbox" aria-label="Select all sections"></th><th class="rp-dl__cell" scope="col">Promotions</th><th class="rp-dl__cell" scope="col">Advanced analytics</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Promotion Stage Tracker</span></label></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Trend Analysis</span></label></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Promotion Performance Summary</span></label></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Price Elasticity</span></label></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Promotion Tracking by Individual Promos</span></label></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Seasonality Analysis</span></label></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Promotion Tracking by Family</span></label></td><td class="rp-dl__cell"></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Promotion Tracking Details</span></label></td><td class="rp-dl__cell"></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell rp-dl__cell--sub"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Overview</span></label></td><td class="rp-dl__cell"></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell rp-dl__cell--sub"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Family &amp; Parts Performance</span></label></td><td class="rp-dl__cell"></td></tr>
+        <tr><td class="rp-dl__cell"></td><td class="rp-dl__cell rp-dl__cell--sub"><label class="rp-dl__option"><input class="rp-checkbox" type="checkbox"><span>Dealer Participants</span></label></td><td class="rp-dl__cell"></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <footer class="modal-foot">
+    <span class="modal-foot__note" data-dl-count>No sections selected</span>
+    <button class="rp-download__btn" type="button" data-export="CSV">Download CSV</button>
+    <button class="btn btn--primary" type="button" data-export="PDF">Download PDF</button>
+  </footer>
+</dialog>
+<script src="js/reports.js"></script>
+  <script src="js/user-menu.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
