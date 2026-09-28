@@ -44,7 +44,7 @@
   // No reset or sign-up service exists yet: say who handles it instead of a dead link.
   form.querySelector('[data-forgot]').addEventListener('click', function (e) {
     e.preventDefault();
-    showAlert('Password resets are handled by the Stellantis IT service desk.', 'info');
+    showAlert('Password resets are handled by the IT service desk.', 'info');
   });
   form.querySelector('[data-request-access]').addEventListener('click', function (e) {
     e.preventDefault();

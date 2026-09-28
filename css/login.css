@@ -94,3 +94,10 @@
   .login { grid-template-columns: minmax(440px, 1fr) minmax(440px, 1fr); }
   .login__brand { padding: 36px 44px; }
 }
+
+/* Logo placeholder on the dark brand panel */
+.login__mark.logo-placeholder {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 4px, transparent 4px 8px);
+  border-color: rgba(255, 255, 255, 0.4); color: rgba(255, 255, 255, 0.7);
+}
+.login__wordmark { letter-spacing: 0.02em; font-size: 13px; font-weight: 600; }
